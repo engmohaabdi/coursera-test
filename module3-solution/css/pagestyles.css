@@ -4,25 +4,14 @@ body{
 	font-size: 16px;
 }
 
-/**Navbar**/
+/**HEADER**/
 
 #header-nav{
 	background-color: #6b48ff;
-	border-radius: 0;
-	height: 100px;
 	margin: 0;
 	border: 0;
 	border-top: 1px solid #000;
 	border-bottom: 1px solid #000;
-}
-
-.navbar-header{
-	padding: 0;
-	margin: 0;
-	height: 100px;
-}
-
-.navbar-brand{
 }
 
 .navbar-brand h1{
@@ -40,6 +29,32 @@ body{
 	text-decoration: none;
 }
 
+#collapsable-nav a{
+    	color: #000;
+    	font-size: 1.2em;
+    }
+    .navbar-header button.navbar-toggle, .navbar-header .icon-bar {
+  		border: 1px solid #f2f4f6;
+	}
+	.navbar-header button.navbar-toggle {
+		clear: both;
+	 	margin-top: -20px;
+	}
+
+    #nav-list{
+    	margin-left: -15px;
+    	margin-right: -15px;
+    }
+    #nav-list a{
+    	color: #fff;
+    }
+    #collapsable-nav hr{
+    	width: 100%;
+    	border: .5px solid #fff;
+    }
+
+/**END OF HEADER**/
+
 /*****MAIN CONTENT*****/
 
 /**Page Heading**/
@@ -55,45 +70,88 @@ body{
 	padding-bottom: 15px;
 }
 
-/**Text Section**/
+/** Section Title Properties **/
 
-#text-section{
-	background-color: #1ee3cf;
-	color: #000;
-	font-family: 'Roboto Mono', monospace;
-}
-
-#text-section h2{
+.section-title{
 	font-size: 1.5em;
+	font-weight: bold;
 }
+
+/**General Section Properties **/
+
+section > div{
+	padding: 0;
+	height: auto;
+}
+
+.sec{
+	background-color: #1ee3cf;
+	font-size: 1em;
+	padding: 0;
+}
+
+.sec > p{
+	padding: 15px 15px 20px 15px;
+	margin: 0;
+}
+
+.container-fluid > section{
+	padding-top: 30px;
+}
+
+#chicken-section{
+	padding-top: 0;
+}
+
+#sushi-section{
+	padding-bottom: 30px;
+}
+
 /*****END OF MAIN CONTENT*****/
 
-/**Dropdown Menu**/
+/*************Page Properties For Desktops *************/
 
-@media (max-width: 767px){
-	#collapsable-nav{
-		width: 100%;
-		background-color: #0d3f67;
-		border-top: 1px solid #000;
-		border-bottom: 1px solid #000;
-		margin: 0;
-		margin-top: -2px;
+@media (min-width: 992px){
+	.col-lg-4{
+		width: 33.33%;
 		float: left;
-		clear: both;
-    }
-    #collapsable-nav hr{
-    	width: 100%;
-    	border: .5px solid #000;
-    }
-    #collapsable-nav a{
-    	color: #fff;
-    	font-size: 1.2em;
-    }
-    .navbar-header button.navbar-toggle, .navbar-header .icon-bar {
-  		border: 1px solid #f2f4f6;
 	}
-	.navbar-header button.navbar-toggle {
-		clear: both;
-	 	margin-top: -20px;
+	.container-fluid > section{
+	padding-top: 0px;
 	}
+	#header-nav{
+		height: 100px;
+	}
+}
+
+/*************Page Properties For Tablets *************/
+
+@media (min-width: 768px) and (max-width: 991px){
+	.col-md-6{
+		width: 50%;
+		float: left;
+	}
+	#beef-section{
+		padding-top: 0;
+	}
+	#sushi-section{
+		width: 100%;
+	}
+	#header-nav{
+		height: 100px;
+	}
+}
+
+/*************Page Properties For Mobiles *************/
+
+@media(max-width: 767px){
+	.col-sm-12{
+		width: 100%;
+	}
+	
+	#collapsable-nav{
+		background-color: #0d3f67;
+		border-top: 1px solid #000;	
+    }
+
 }
